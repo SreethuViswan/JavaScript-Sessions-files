@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Sum of digits of a number</h2>
+    Enter the number : <input type="number" name="number" id="num">
+    <input type="submit" onclick="sumOfDigit(num)" value="Check"> 
+    
+<script>
+
+function sumOfDigit()    
+{  
+    
+    var num=Number(document.getElementById("num").value);
+         console.log(num);
+var sum=0,mode;    
+   
+while(num!=0)    
+{    
+
+    mode=num%10;
+    sum = sum + mode ;
+    num=Math.floor(num/10);
+
+
+}   
+document.write("Sum is " + sum);   
+   
+return 0;
+  
+}   
+</script>
+</body>
+</html>

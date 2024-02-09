@@ -1,0 +1,92 @@
+<!-- var divOne=documnet.querrySelector("#id")
+var divOne=$("#id")
+
+divOne.style.color="red"
+
+$(divOne).css("color","red") -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class1{
+            background-color: aqua;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Helloo Everyone</h1>
+        <h2>The h2 element represents a section heading.</h2>
+        <h3 class="section">This is heading4</h3>
+       
+    </div>
+
+    <p class="section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex inventore praesentium beatae optio distinctio soluta quisquam aut voluptatum dolore expedita minima deserunt maiores laborum quibusdam a quaerat possimus tempora, sapiente magnam facilis earum maxime. Totam voluptatibus tenetur suscipit minus possimus dolore exercitationem placeat sit deleniti, hic et repudiandae. Corporis eligendi molestiae ipsam, reiciendis ab non eos culpa necessitatibus impedit voluptatibus eum saepe reprehenderit sit aliquid quaerat? Facilis quibusdam alias dolorum, repellat voluptates fuga vitae quae natus. Repudiandae, fugit quod voluptates sit dicta voluptate in, autem fuga tempora officiis doloremque, provident itaque? Excepturi odit quas saepe adipisci non rem, nesciunt quo.</p>
+
+    <ul>
+<li>Item1</li>
+<li>Item2</li>
+<li>Item3</li>
+<li>Item4</li>
+    </ul>
+    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem totam, vero quo dicta hic expedita id voluptatum facere maiores earum vitae, aspernatur rem. Aspernatur, quisquam!</p>
+    <h4></h4>
+    <button id="buton">Click Me</button>
+    <br>
+    <br>
+    <button id="b"> Submit</button>
+
+    <h3>The h3 element represents a section heading.</h3>
+    <input type="text" id="" placeholder="UserName">
+    <input type="text" id="" placeholder="Password">
+  
+    <script>
+     $('p').css('color','green');
+     $('p').eq(1).css('color','red');
+     $('li').css('text-align','center');
+     $('li').eq(1).css('text-align','right');
+
+     $('.container h2').css('color','orange');
+
+     var newStyle={
+              'color':'blue',
+              'border':'2px solid pink'
+
+     }
+
+     $('.section').css(newStyle)
+
+
+     $('#buton').click(function(){
+        console.log("This is new Function")
+     })
+
+     $('#b').click(function(){
+        $(this).text("Clicked")
+     })
+
+     $('input').eq(0).keypress(function(){
+          $('h4').text('input happening')
+     })
+
+     $('input').eq(1).click(function(){
+
+       $(this).toggleClass('class1')
+     })
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+

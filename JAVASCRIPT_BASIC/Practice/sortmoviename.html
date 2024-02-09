@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const numberOfMovies = Number(prompt("How many movies do you want to enter"));
+        const movies = new Array(numberOfMovies);
+
+        for (i=0; i<=numberOfMovies; i++ ){
+            const movieName=prompt("Enter movie name");
+            movies[i] = movieName;
+        }
+
+        movies.sort();
+        //display movies
+        alert("movie names: " + movies)
+
+
+    </script>
+
+</body>
+</html>

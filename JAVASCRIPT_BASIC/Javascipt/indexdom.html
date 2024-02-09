@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+  
+</head>
+<body>
+    <!-- <button onclick="alert('button clicked')">Click Me</button> -->
+    <!-- <script src="script.js"> -->
+        <!-- alert("Hello script document"); -->
+     <!-- console.log("This is console"); -->
+    <!-- </script> -->
+
+<h1 id="heading1">Document Object Model</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio delectus dolorum quos eius, in sunt ipsa quibusdam officia sed sapiente veniam. Error illum nisi molestiae.</p>
+<p class="list-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sit harum, saepe inventore laboriosam blanditiis nam commodi illo, tenetur hic eius culpa ea ipsa nobis velit provident fugit. Nostrum nemo cupiditate odit modi consequuntur quod aliquid harum hic molestias illum distinctio deserunt autem nihil natus, minima, reprehenderit nobis quis tenetur. </p>
+<ol class="list-class">
+    <li>Item1</li>
+    <li id="item2id">Item2</li>
+    <li>Item3</li>
+</ol>
+
+<h2 id="heading2">Hello <a href="https://www.google.com/">Google</a> Everyone</h2>
+<p id="paraThree">Lorem ipsum dolor sit amet, <a href="">Google</a>consectetur adipisicing elit. Accusamus odit unde officia sit laborum maiores soluta vel tempore natus? Obcaecati.</p>
+
+<script>
+    var paraOne=document.querySelector("#paraThree");
+    // console.log(paraOne);
+    paraOne.textContent="Sample Text"
+
+    var link1=document.getElementById("heading2");
+    console.log(link1);
+    var link2=link1.querySelector("a");
+    console.log(link2);
+    link2.getAttribute("href");
+    link2.setAttribute("href","https://www.instagram.com/accounts/login/");
+
+</script>
+
+
+</body> 
+</html>

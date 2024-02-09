@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <style>
+        img{
+            width:50%;
+            height:70%;
+            float:left;
+           
+        }
+
+        ul,li{
+         
+
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+     
+    <ul id="lightslider">
+
+        <li>
+           <img   src="images/violet.jpg"   alt="">
+        </li>
+        <li></li>
+        <img  src="images/rose.jpg" alt="">
+        <li>
+            <img src="images/white.jpg"  alt="">
+        </li>
+    </ul>
+
+    <script>
+$(document).ready(function(){
+
+      
+ 
+    $('#lightslider').lightSlider({
+       
+
+        item: 1, // Number of items to display in the slider
+        loop: true, // Enable infinite loop
+        slideMove: 1, // Number of slides to move on navigation
+        slideMargin: 10, // Margin between slides
+        auto:true,
+        pause:2000,
+        pauseOnHover:true,
+        // autoWidth: true,
+        
+        
+
+ }); 
+});
+
+ </script>
+</body>
+</html>

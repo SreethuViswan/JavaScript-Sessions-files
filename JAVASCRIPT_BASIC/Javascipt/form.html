@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" method="get" id="form1">
+    <label for="username1" >UserName:</label>
+    <input type="text" name="username"id="username1" placeholder="UserName">
+    <br>
+    <label for="password1">Password:</label>
+    <input type="password" name="password" id="password1">
+    <input type="submit" value="Submit" >
+
+
+</form>
+
+<div id="array">
+
+</div>
+<script>
+    const allForm=document.getElementById("form1");
+    const userName=document.getElementById("username1");
+    const passWord=document.getElementById("password1");
+    const arrays=document.getElementById("array")
+
+    allForm.addEventListener("submit",function(e){
+
+        let messages=[];
+
+        if (userName.value==="" || userName.value===null)
+        {
+          messages.push("Name is required") ; 
+          
+
+        }
+
+        if(passWord.value.length<8)
+        {
+            messages.push("Password can not be less than 8 characters")
+        }
+
+        if(passWord.value.length>20)
+        {
+            messages.push("Should not be greater than 20 characters")
+        }
+
+        const passwordRegX=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+        if (!passwordRegX.test(passWord.value)){
+            messages.push("password must include 1 uppercase and lowercase letters and 1 digit ")
+        }
+        arrays.innerText=messages;
+        e.preventDefault();
+    })
+
+</script>
+
+</body>
+</html>

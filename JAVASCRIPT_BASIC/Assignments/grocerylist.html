@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grocery List</h1>
+    Enter A Product<input type="text" id="product" >
+    Enter A Quantity<input type="text" id="quantity" >
+    <button id="submit">Submit</button>
+    <ul id="tasklist">
+    </ul>
+
+
+    <script>
+     //const taskInput=document.getElementsByTagName("input");
+    const taskInput=document.getElementById("product");
+    const quantityInput=document.getElementById("quantity");
+    const submitButton=document.getElementById("submit");
+    const taskList=document.getElementById("tasklist");
+  
+    submitButton.addEventListener('click',function()
+{
+            var productName = taskInput.value;
+            var quantity = quantityInput.value;
+    
+
+            if (productName.trim() !== "" && quantity.trim() !== "") {
+                var listItem = document.createElement("li");
+               // listItem.textContent = `Product: ${productName}, Quantity: ${quantity}`;
+               listItem.textContent = quantity + ' '+ productName;
+
+                taskList.appendChild(listItem);
+                taskInput.value = "";
+                quantityInput.value = "";
+            }
+ });
+
+
+
+
+
+    </script>
+</body>
+</html>

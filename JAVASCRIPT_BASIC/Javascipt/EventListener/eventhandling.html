@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="a">Click</button>
+    <br>
+    <button id="b" >Hover</button>
+    <br>
+    <button id="c">Click</button>
+<br>
+    <button id="d">ONClick</button>
+    <script>
+        const button1=document.getElementById("a");
+        const button2=document.getElementById("b");
+        const button3=document.getElementById("c");
+
+
+
+        button1.addEventListener("click", function(){
+            button1.style.color="red";
+            button1.textContent="Clicked";
+        })
+
+        button2.addEventListener("mouseover",function(){
+            button2.textContent="mouseover";
+
+        })
+
+        button2.addEventListener("mouseout",function(){
+            button2.textContent="mouseout";
+            
+        })
+
+        button3.addEventListener("dblclick",function(){
+            button3.textContent="Doubleclick";
+            button3.style.color="green";
+            
+        })
+
+        const button4=document.getElementById("d");
+  
+   button4.onclick=function()
+    {
+        button4.style.color="red";
+            button4.textContent="First Clicked";
+    }
+
+    button4.onclick=function()
+    {
+        button4.style.color="yellow";
+            button4.textContent="First Clicked";
+    }
+
+    button4.addEventListener("Click",handler())
+
+    button4.addEventListener("Click",handler1())
+
+function handler(){
+    button4.style.color="green";
+            button4.textContent="Fist time Clicked";
+}
+
+function handler1(){
+    button4.style.color="blue";
+            button4.textContent="second time Clicked";
+}
+
+    </script>
+    
+</body>
+</html>

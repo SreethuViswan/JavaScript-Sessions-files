@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+background-color: rgb(32, 151, 151);
+width: 400px;
+height: 400px;
+margin-left: 80px;
+        }
+
+   .table{
+    width:200px;
+    height: 180px;
+    margin-top: 100px;
+  padding-left: 100px;
+    padding-top: 100px;
+font-size:xx-large;
+   }        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="main" >
+    <table class="table">
+        <tr>
+    
+         <th>
+            <input type="text" disabled id="result">
+            <input type="button"  id="clear" value="C" onclick="clearFunction()">
+        </th>
+
+        </tr>
+        <tr>
+<th>
+    <input type="button" value="0" onclick="display('0')">
+    <input type="button" value="1" onclick="display('1')">
+    <input type="button" value="2"  onclick="display('2')">
+    <input type="button" value="3"  onclick="display('3')">
+    <input type="button" value="4" onclick="display('4')">
+   
+</th>
+
+        </tr> 
+<tr>
+     <th>
+        <input type="button" value="5" onclick="display('5')">
+        <input type="button" value="6" onclick="display('6')">
+        <input type="button" value="7"  onclick="display('7')">
+        <input type="button" value="8"  onclick="display('8')">
+        <input type="button" value="9" onclick="display('9')">
+               
+            </th>
+            
+                    </tr>
+<tr>
+    <th>
+        <input type="button" value="+" onclick="add()">
+        <input type="button" value="-" onclick="subtract()">
+        <input type="button" value="*"  onclick="multiply()">
+        <input type="button" value="/"  onclick="divide()">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="." onclick="display('.')">
+                                  
+                               </th>
+                               
+                                       </tr>
+
+    </table>
+</div>
+
+
+<script>
+    function clearFunction(){
+       
+       document.getElementById("result").value="";
+
+    }
+
+
+    function display(value){
+document.getElementById("result").value+=value;
+    }
+
+    function calculate(){
+       
+    var  x= document.getElementById("result").value;
+    var y = document.getElementById("result").value;
+
+
+
+  
+    function add(x,y)
+    {
+     
+
+      var result= x + y  ;
+      document.getElementById("result").value=result;    
+
+    }
+    function subtract()
+    {
+      
+        var result= x - y  ;
+        document.getElementById("result").value=result;
+        
+
+    }
+    function multiply()
+    { 
+        var result= x - y ;
+        document.getElementById("result").value=result;
+    }
+    function divide()
+    {
+        var result= x / y  
+        document.getElementById("result").value=result;
+        
+
+    }
+
+}
+</script>
+
+</body>
+</html>

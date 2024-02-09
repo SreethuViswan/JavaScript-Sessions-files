@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Even or Odd</h2>
+    Enter the number : <input type="number" name="number" id="num">
+    <input type="submit" onclick="evenOrOdd()" value="Check"> 
+
+
+<script>
+
+
+
+ function evenOrOdd(){ 
+     num=Number(document.getElementById("num").value);
+         console.log(num);
+
+         if(num%2==0)
+         {
+            document.write(num + " is a Even Number ")
+         }
+         else{
+            document.write(num + " is a Odd Number ")
+
+         }
+
+
+ }
+</script>
+</body>
+</html>

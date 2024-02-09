@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="container">
+         
+        <div id="box">
+            Demo Box
+        </div>
+
+        <button id="btn">Change Content of the p element</button>
+
+        <p class="para">Helooo Everyone</p>
+        <p class="para">GoodMorning</p>
+         <div class="section">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, fuga sapiente repudiandae sequi earum ratione deleniti ipsum ducimus laborum voluptatum, aliquid, deserunt iure numquam accusantium molestiae tempora reprehenderit. Ex aperiam maiores iure. Dignissimos accusantium doloribus, tempore ut nobis omnis harum eius vitae hic, ratione et impedit libero animi amet odit!
+         </div>
+        <button id="get">Get Content</button>
+        <p id="display"></p>
+    </div>
+
+    <script>
+        // console.log($('#container').html())
+
+        $(document).ready(function(){
+          
+            $("#get").click(function(){
+                var content=$(".section").html()
+                // console.log(content)
+                $("#display").html("newcontent"+content)
+
+            })
+
+            $('#btn').click(function(){
+                $('.para').html("<b>Helooo This is new paragraph</b>")
+            })
+
+
+            
+        })
+    </script>
+</body>
+</html>

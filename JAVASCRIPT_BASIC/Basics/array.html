@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruit=["Apple","Orange","Banana"];
+        console.log(fruit);
+        console.log(fruit[0]);
+        let array=["1","23",null];
+        console.log(array);
+        console.log(fruit[2][0]);
+        fruit.push("Grapes");
+        console.log(fruit);
+        // pop delete last element shift--delete first element
+        fruit.pop("");
+        fruit.shift();
+        // unshift add new element front
+        fruit.unshift("Pineapple")
+        console.log(fruit)
+        let num;
+        // num=fruit.indexOf("Orange");
+        num=fruit.indexOf("strawberry");
+        console.log(num);
+        fruit.reverse();
+        console.log(fruit);
+        let color=["red","green","blue","yellow"]
+        let newColor=color.slice(1,3);
+        console.log(newColor);
+        console.log(color);
+        // splice(start index,delete count)
+        color.splice(2,2);
+        console.log(color);
+        
+       
+
+
+     
+        
+
+        
+    </script>
+</body>
+</html>

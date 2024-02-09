@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="a"> 
+   <button onclick="display()">Click Me</button>
+   <h1 id="b"></h1>
+  
+
+   <script>
+    function display(){
+let input=document.getElementById("a").value;
+document.getElementById("b").innerHTML =input;
+alert(input);
+
+
+// For Pop up messages
+// window.alert("clciked");
+// alert("helloo everyone");
+
+    }
+   </script>
+</body>
+</html>

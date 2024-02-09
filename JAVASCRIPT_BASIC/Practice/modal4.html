@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+<style>
+ .container{
+  margin: 50px;
+ }
+</style>
+  </head>
+<body>
+
+
+
+  <div class="container">
+    <h1 class="text-center">Todo List</h1>
+  
+    <ul id="todoList">
+    </ul>
+    <button id="addTaskBtn" class="btn btn-primary mt-3" data-toggle="modal" data-target="#addTaskModal">Add Task</button>
+  </div>
+    
+  <div class="modal" id="addTaskModal" tabindex="-1">
+   
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Task</h5>
+           
+          </div>
+          <div class="modal-body">
+       <div class="form-group">
+              <input type="text" class="form-control" id="inputtask" required placeholder="Item">
+              <input type="text" class="form-control" id="inputdesc" required placeholder="Description">
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="savetaskbutton">Save Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+        var inputTask=document.getElementById("inputtask") 
+        var inputDesc=document.getElementById("inputdesc")
+        var saveTaskButton=document.getElementById("savetaskbutton")
+        var addTaskButton=document.getElementById("addtaskbtn")
+         var listItems=document.getElementById("todoList")
+
+        saveTaskButton.addEventListener("click",function(){
+        var taskInput=inputTask.value;
+        var taskDesc=inputDesc.value;
+        console.log(taskInput);
+        console.log(taskDesc);
+       
+
+        if(taskInput !=="" && taskDesc !=="" ){
+            addTask();
+            // taskInput,taskDesc
+            $("#addTaskModal").modal('hide')
+        }
+    
+
+    function addTask(){
+        var item=document.createElement("li")
+        item.textContent=taskInput+ ' ' + taskDesc;
+
+        var deleteButton=document.createElement("button")
+        deleteButton.textContent="remove"
+        // deleteButton.className="float-right"
+        deleteButton.addEventListener("click",function(){
+        listItems.removeChild(item)   
+        })
+
+ listItems.appendChild(item)
+
+ item.appendChild(deleteButton)
+
+ }
+})
+
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

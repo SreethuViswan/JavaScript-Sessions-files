@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    function ispalindrome(str){
+      
+       const len=str.length;
+        for (let i=0;i<len/2;i++)
+        { 
+             if (str[i] !==str[len-1-i])
+        {
+            return false;
+        }
+
+       }
+       return true;
+     }
+
+    const string=prompt("Enter a string or number");
+    const ispal=ispalindrome(string);
+    if (ispal){
+        alert(string+"is a palindrome");
+    }
+    else{
+        alert(string+"is not  a palindrome"); 
+    }
+
+    
+
+
+     
+</script>
+
+</body>
+</html>

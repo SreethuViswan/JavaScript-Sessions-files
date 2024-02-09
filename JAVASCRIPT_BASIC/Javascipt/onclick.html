@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="d">ONClick</button>
+    <button id="e">ONClick</button>
+
+    <script>
+         const buttonOne=document.getElementById("d");
+         buttonOne.onclick=function()
+    {
+        buttonOne.style.color="red";
+            buttonOne.textContent="First Click";
+    }
+
+   
+         buttonOne.onclick=function()
+    {
+        buttonOne.style.color="Green";
+            buttonOne.textContent="Second Click";
+    }
+
+
+    const buttonTwo=document.getElementById("e");
+    buttonTwo.addEventListener("click",handler());
+
+ buttonTwo.addEventListener("click",handler1());
+
+function handler(){
+    buttonTwo.style.color="green";
+    buttonTwo.textContent="Fist time Clicked";
+}
+
+
+
+function handler1(){
+buttonTwo.style.color="blue";
+        buttonTwo.textContent="second time Clicked";
+}
+           
+
+    </script>
+
+</body>
+</html>

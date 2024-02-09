@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+     
+    <div class="parent">
+        <h2>This is heading</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint dolores ad numquam, totam distinctio molestias fugit quis ut provident? Laborum aperiam doloribus accusamus, nam vitae dignissimos corporis velit asperiores in quibusdam, consectetur amet dolore illum nisi, architecto sint alias temporibus adipisci! Non sunt aut pariatur voluptatem distinctio quisquam, ullam debitis!</p>
+
+        <div id="childdiv">
+               <h3>child heading</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eum.</p>
+        </div>
+    </div>
+
+
+    <script>
+     $(document).ready(function(){
+  let a=$("h2").parent();
+  console.log(a)
+
+  let b=$("h3").siblings();
+  console.log(b)
+
+  let c=$(".parent").children()
+  console.log(c)
+$("div").first().css("color", "blue");
+
+$("div").last().css("color", "green");
+
+ $("p").eq(0).css("background-color", "orange");
+ 
+
+$("p").eq(1).css("background-color", "red");
+  
+
+
+
+ 
+});
+    </script>
+</body>
+</html>

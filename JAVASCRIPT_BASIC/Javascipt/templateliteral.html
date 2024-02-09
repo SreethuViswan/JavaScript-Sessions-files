@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li id="a">
+
+    </li>
+
+    <li id="b">
+
+    </li>
+</ul>
+    
+    <script>
+
+        var name='sreethu'
+        var age=10
+
+        var greeting="Hello my name is "+ name + " iam " + age + " years old "
+        console.log(greeting)
+
+        var greeting1=`My name is ${name} and iam ${age} years old `
+        console.log(greeting1)
+
+        // document.body.innerHTML="<p>" + greeting + "</p>"
+
+            // document.body.innerHTML=`<p>${greeting1}</p>`
+
+      var listOne=document.getElementById("a")
+
+      var listTwo=document.getElementById("b")
+   
+
+      listOne.innerHTML="<p>" + greeting + "</p>"
+      listTwo.innerHTML=`<p>${greeting1}</p>`
+             
+
+
+
+      
+   
+   
+   
+   </script>
+
+
+
+</body>
+</html>

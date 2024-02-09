@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class1{
+            background-color: aqua;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+   <p>The first paragraph is selected</p>
+   <p id="para2">The Second paragraph is selected</p>
+   <p class="para">The Third paragraph is selected</p>
+   <p id="a">html function1</p>
+   <p id="b"></p>
+
+
+
+
+
+   <script>
+
+    $(document).ready(function(){
+    $('p').css("background-color","cyan")
+
+    })
+
+
+    $('#para2').click(function(){
+        $(this).hide()
+    })
+
+    // alert($('#a').html());
+    $('#b').html("Heloooo everyone ");
+
+    // whats the difference
+    var htmlString=$(this).html()
+     $(this).text(htmlString)
+
+   </script>
+</body>   
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .class1{
+            background-color: aqua;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div>
+    <p class="c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum vitae dolorem assumenda corporis atque fugit doloremque. Quibusdam magni corrupti consequatur dolores aperiam architecto dolore laboriosam!</p>
+
+    <button id="a">Empty Container</button>
+<br>
+<br>
+    <button id="b">Remove paragraph</button>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('div p').html("This is new page")
+        $('#a').click(function(){
+            $('div').empty()
+                                })
+
+       $('#b').click(function() {
+        $('div p').remove()
+       })
+})
+
+
+$('div').addClass('class1')
+
+var divWidth=$('div').width()
+$('div').append('<h1>'+ divWidth + '</h1>')
+
+var divHeight=$('div').height()
+$('div').append('<h1>'+ divHeight + '</h1>')
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

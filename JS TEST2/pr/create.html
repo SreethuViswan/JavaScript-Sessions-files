@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+            <li><a href="create.html">CREATE</a></li>
+            <li><a href="#view">VIEW</a></li>
+            <li><a href="#edit">EDIT/DELETE</a></li>
+        </ul>
+ 
+        <div class="rightNav">
+            <input type="text" name="search" id="search">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+<main>
+    
+    <div class="container">
+       <h2> RECENT BLOGS</h2>
+       <ul>
+
+       </ul>
+
+        <h2>CREATE BLOG</h2>
+   
+            <form id="createblog">
+                <div class="form-group">
+                    <label for="tittle">Tittle:</label>
+                    <input type="text" id="tittle" name="tittle" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <input type="text" id="content" name="content" required>
+                </div>
+                <div class="form-group">
+                    <label for="authorname">Authername:</label>
+                    <input type="text" id="authorname" name="authorname" required>
+                </div>
+                <button type="submit">CREATE</button>
+            </form>
+
+            </div>
+                
+            </main>
+
+            <script src="script2.js"></script>
+
+</body>
+</html>

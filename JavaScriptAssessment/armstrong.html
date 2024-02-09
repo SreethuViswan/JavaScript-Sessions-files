@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>Armstrong or Not </h2>
+     Enter the number : <input type="number" name="number" id="num">
+     <input type="submit" onclick="armstrong()" value="Check"> 
+
+
+     <script>
+
+        function armstrong(){
+            var number,remainder,addition=0;
+            number=Number(document.getElementById("num").value);
+
+            var temp=number;
+            while(temp>0)
+            {
+                remainder=temp%10;
+                addition += remainder ** (number.toString().length);
+                temp = (temp - remainder) / 10;
+
+            }
+
+            if(num == "")
+            {
+                window.alert("Please enter the number")
+
+            }
+
+            else if(addition == number){
+                window.alert("The Number is Amstrong")
+            }
+
+            else{
+                window.alert("The Number is not Amstrong")
+            }
+        }
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div id="parent">
+        <h1 class="heading">EventMethod</h1>
+        
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt vero facilis dolore beatae laborum tempore illum, magni nobis delectus ipsum unde vitae quia quasi harum? Aliquam voluptate vitae a?</p>
+      </div>
+
+      <button id="add">ADD</button>
+      <button id="remove">REMOVE</button>
+
+    <script>
+
+        const parentDiv=document.getElementById("parent");
+        const addButton=document.getElementById("add");
+        const removeButton=document.getElementById("remove");
+
+    addButton.addEventListener("click",function(){
+   
+        var newElement=document.createElement("p");
+        newElement.textContent="This is new Paragraph";
+        parentDiv.appendChild(newElement);
+})
+
+removeButton.addEventListener("click",function(){
+     
+    var first=parentDiv.firstElementChild;
+    parentDiv.removeChild(first);
+})
+
+     const para=document.getElementById("paragraph");
+    // para.setAttribute("align","center");
+    const alignAttribute=para.getAttribute("align");
+    alignAttribute.setAttribute("align","right");
+
+    </script>
+
+
+</body>
+
+
+    
+</html>

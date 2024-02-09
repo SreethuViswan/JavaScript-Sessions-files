@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+function gcd(a, b) { 
+    for (let temp = b; b !== 0;) { 
+        b = a % b; 
+        a = temp; 
+        temp = b; 
+    } 
+    return a; 
+} 
+  
+function lcmFunction(a, b) { 
+    const gcdValue = gcd(a, b); 
+    return (a * b) / gcdValue; 
+} 
+
+const num1 = parseInt(prompt('Enter the first number '));
+const num2 = parseInt(prompt('Enter the second number '));
+
+let lcm = lcmFunction(num1, num2); 
+document.write("LCM of given numbers is = ", lcm);
+    </script>
+</body>
+</html>

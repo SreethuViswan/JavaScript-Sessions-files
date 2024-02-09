@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="parent"><h1 class="head">List of Items</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur eaque cupiditate vero nesciunt nobis voluptatum maiores incidunt omnis quaerat fugit quos iure, deserunt similique.</p><ul id="purchases"><li>Milk</li>
+            <li>Egg</li>
+            <li>Butter</li>
+            <li>Bread</li>
+          </ul></div>
+
+
+     <script>
+const parentElement=document.getElementById("parent");
+console.log(parentElement);
+console.log(parentElement.parentNode);
+var listParentElement=document.getElementById("parent");
+var children=listParentElement.children;
+console.log(children);
+ var firstChild=parentElement.firstChild ;
+ console.log(firstChild);
+
+//  last child
+  var lastChild=parentElement.lastChild;
+  console.log(lastChild);
+//OR
+  console.log(parentElement.lastChild);
+
+var ulElement=document.getElementById("purchases");
+console.log(ulElement.previousSibling);
+console.log(ulElement.nextSibling)
+
+const listItems=document.getElementsByTagName("li");
+console.log(listItems);
+for (let i=0;i<listItems.length;i++)
+{
+    console.log(listItems[i])
+    console.log(listItems[i].textContent)
+}
+
+
+     </script>
+
+     
+
+</body>
+</html>

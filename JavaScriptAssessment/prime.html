@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <br>
+    <center>
+        <!-- number divided by 1 and only that number -->
+        <h2>Prime or Not</h2>
+        Enter the number : <input type="text" name="number" id="num">
+       <br>
+       <br>
+       <button onclick="checkPrime()">CHECK</button>
+    </center>
+
+    <script>
+         function checkPrime(){
+             var i,flag=0,number;
+             number=Number(document.getElementById("num").value);
+             console.log(number);
+             if (number == 0){
+                  window.alert(number + " is not a prime number");
+                  return;
+             }
+
+
+             for (i = 2; i <= number/2; i++)
+             {
+
+                if (number%i == 0)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+        if (flag == 0){
+            window.alert(number + " is a prime number");
+        }
+        else{
+            window.alert(number + " is not a prime number");
+        }
+         }
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #container{
+            display: none;
+        } */
+
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+         
+        }
+    </style>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <button id="show">Show</button>
+    <br>
+    <button id="hide">Hide</button>
+    <br>
+    <button id="toggle">Toggle</button>
+    <br>
+    <button id="fadetoggle">Fade Toggle</button>
+    <br>
+    <button id="fadein">Fade In</button>
+    <br>
+    <button id="fadeout">Fade Out</button>
+    <br>
+    <button id="fadeto">Fade To</button>
+    <br>
+    <button id="slidetoggle">Slide Toggle</button>
+    <br>
+    <button id="slideup">Slide Up</button>
+    <br>
+    <button id="slidedown">Slide Down</button>
+    <button id="animate"> Animate</button>
+
+    <div id="box">
+
+    </div>
+
+    <div id="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, quibusdam.</p>
+
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur sequi suscipit, cupiditate itaque praesentium rerum sint illum necessitatibus facere voluptates deleniti tempore, quidem id nisi veritatis alias quos minima quam omnis sit harum rem. Temporibus perspiciatis blanditiis repudiandae quas, pariatur accusantium voluptatibus eius molestiae quae deserunt eos in! Optio quae aliquam impedit consequatur aspernatur tempora maxime. Ipsam consequatur enim iusto veniam. Delectus error doloremque sint aut hic ipsum impedit quasi at ad cumque soluta accusantium modi, odit rem voluptatem a? Molestiae fugit perferendis ex totam quo fuga dolorem vel eos qui aspernatur perspiciatis facilis cumque ut excepturi, deleniti nobis dolore?
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+            $('#show').click(function(){
+                $('#container').show()
+
+            })
+
+            $('#hide').click(function(){
+                $('#container').hide()
+
+        })
+
+        $('#toggle').click(function(){
+                $('#container').toggle()
+
+        })
+
+        $('#fadetoggle').click(function(){
+                $('#container').fadeToggle()
+
+        })
+        $('#fadein').click(function(){
+                $('#container').fadeIn(4000)
+
+        })
+
+        $('#fadeout').click(function(){
+                $('#container').fadeOut(4000)
+
+        })
+
+        $('#fadeto').click(function(){
+                $('#container').fadeTo(4000,0.5)
+
+        })
+
+        
+        $('#slideup').click(function(){
+                $('#container').slideUp()
+
+        })
+        $('#slidedown').click(function(){
+                $('#container').slideDown()
+
+        })
+        $('#slidetoggle').click(function(){
+                $('#container').slideToggle()
+
+        })
+        $('#animate').click(function(){
+                $('#box').animate({
+                    height:"400px",
+                    width:"400px",
+                    left:"450px",
+                   
+                } ,5000,function(){
+                    $(this).css("backgroundColor","red")
+                })
+                .delay(3000)
+                .animate({
+                    height:"100px",
+                    width:"100px",
+                    left:"0",},1000, function(){
+                    $(this).css("backgroundColor","green")})
+})
+    })
+
+
+
+    </script>
+
+    
+</body>
+</html>

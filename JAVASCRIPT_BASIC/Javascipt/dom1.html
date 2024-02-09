@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .highlight{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+     <div id="parent">
+        <h1 class="head">List of Items</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur eaque cupiditate vero nesciunt nobis voluptatum maiores incidunt omnis quaerat fugit quos iure, deserunt similique.</p>
+         <ul id="purchases"><li>Milk</li>
+            <li>Egg</li>
+            <li>Butter</li>
+            <li>Bread</li>
+          </ul>
+     </div>
+
+   <button id="toggleButton">Toggle</button>
+
+
+</body>
+
+<script>
+const parentDiv = document.getElementById("parent");
+const headingElement = document.querySelector(".head");
+if (headingElement !== null)
+{
+    console.log("NodeType", headingElement.nodeType);
+    console.log("NodeName", headingElement.nodeName);
+    console.log("NodeValue", headingElement.nodeValue);
+}
+
+const paragraphElement=document.querySelector("p");
+const textNode=paragraphElement.firstChild;
+if (headingElement !== null)
+{
+    console.log("NodeType", textNode.nodeType);
+    console.log("NodeName", textNode.nodeName);
+    console.log("NodeValue",textNode.nodeValue);
+}
+
+const ulNode=document.querySelector("ul");
+const attributeNode=ulNode.getAttributeNode("id");
+if (headingElement !== null)
+{
+
+    console.log("NodeType", ulNode.nodeType);
+    console.log("NodeName", ulNode.nodeName);
+    console.log("NodeValue",ulNode.nodeValue);
+}
+
+// HW--Attribute node
+
+if (headingElement !== null)
+{
+
+    console.log("NodeType", attributeNode.nodeType);
+    console.log("NodeName", attributeNode.nodeName);
+    console.log("NodeValue",attributeNode.nodeValue);
+}
+
+
+
+
+
+parentDiv.style.color="red";
+parentDiv.style.backgroundColor="yellow";
+
+const purchaseList=document.querySelector("ul");
+purchaseList.style.cssText="color:blue; list-style-type:none;"
+ 
+purchaseList.classList.add("highlight");
+//setTimeout(()=>{
+   // purchaseList.classList.remove("highlight");},2000);
+
+ 
+ const ButtonNode=document.getElementById("toggleButton");
+  ButtonNode.addEventListener('click',()=>{
+    purchaseList.classList.toggle("highlight");
+  })
+
+
+
+
+</script>
+</html>

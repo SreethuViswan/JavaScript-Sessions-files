@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a" placeholder="name">
+
+    <input type="text" id="b" placeholder="lastname">
+
+
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+
+
+    <script>
+        function saveData(){
+            var firstName=document.getElementById("a").value
+            var lastName=document.getElementById("b").value
+
+            if (firstName =="" || lastName==""  )
+            {
+                alert("Enter First name and last name")
+            }
+            localStorage.setItem("a", firstName)
+            localStorage.setItem("b",lastName)
+                alert("data saved to local storage")
+        }
+
+
+        function loadData(){
+
+            var savedInputOne=localStorage.getItem("a")
+
+            var savedInputTwo=localStorage.getItem("b")
+
+            document.getElementById("a").value=savedInputOne;
+            document.getElementById("b").value=savedInputTwo;
+        }
+    </script>
+</body>
+</html>
