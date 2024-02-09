@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <script>
+// ... spread operator
+    const numbers=[12,22,33,46,56,78];
+    console.log(...numbers);
+
+    console.log(numbers);
+
+    const newnumbers=[...numbers];
+    console.log(newnumbers);
+ console.log(numbers == newnumbers);
+
+//  MERGED ARRAY
+
+// const mergedArray=[11,13,numbers]
+const mergedArray=[11,13,...numbers]
+console.log(mergedArray);
+const mergedArray2=[...numbers,...mergedArray]
+console.log(mergedArray2)
+
+let person={name:"sreethu",
+            age:30};
+let employee={...person,
+              age:20,
+              job:"Engineer"};
+
+console.log(employee);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

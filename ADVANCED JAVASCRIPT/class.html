@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Product{
+
+            constructor(name,price){
+                this.name=name;
+                this.price=price;
+
+            }
+            printDetails(){
+                console.log(this.name +" costs " + this.price);
+
+            }
+        }
+
+        product1 = new Product("Monitor", 5000);
+        product2 = new Product("KeyBoard", 1000);
+
+        console.log(product1.name);
+        console.log(product1.price);
+        product1.printDetails();
+        console.log(product2.name);
+        console.log(product2["name"]);
+        console.log(product2.price);
+        product2.printDetails();
+      
+        
+
+    </script>
+</body>
+</html>

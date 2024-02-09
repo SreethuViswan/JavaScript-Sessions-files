@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//scope of variable limited inside the function
+
+        function scope(){
+             var user = "Baabtra";
+            console.log("User inside function : " + user);
+            if(true){
+             var age = "10";
+                console.log("User inside block : " + user);
+                console.log("Age inside  block : " + age);
+
+            }
+            console.log("Age after block : " + age);
+            
+        }
+// reference error
+        scope();
+        console.log("User outside function : " + user);
+        console.log("Age outside function : " + age);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const numbers=[12,45,34,78,65]
+
+        const [a,b,...c]=numbers;
+
+        let[,,...js]=numbers;
+        console.log(js);
+
+        console.log(a,b);
+
+        console.log(c);
+
+        let person={name:"Sreethu",
+                    age:30,
+                    gender:"Female"};
+
+         let{name,...details}=person;
+         console.log(name);  
+         console.log(details); 
+         
+         
+
+    </script>
+</body>
+</html>

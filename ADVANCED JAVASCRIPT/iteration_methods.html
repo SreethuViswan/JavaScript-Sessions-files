@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+         const array=[12,22,33,46,56,78];
+
+        //EVERY-------  const allEven=array.every(function(value){
+        //SOME -------  const allEven=array.some(function(value){
+        // FIND -----
+            const allEven=array.find(function(value){
+            return value%2==0;
+        })
+
+        // FOR EACH FUNCTION
+            array.forEach(process)
+            function process(value,index,array)
+            {
+                console.log(`value is ${value} index is ${index} array is ${array}`)
+               
+            }
+//FOR EACH FUNCTION --add 1  
+
+            array.forEach(function(value){
+                console.log(value+1)
+            })
+// FOR EACH ---ARROW FUNCTIONS--Doubles value
+            array.forEach((value)=> {
+                console.log(value*2)
+            })
+// FILTER FUNCTION
+      const filteredArray=array.filter(function check(value){
+       
+         return value>50
+
+
+      })
+
+    //   Template Strings use back-ticks (` print ${value}`) 
+      console.log(`filered Array is ${filteredArray}`)
+      
+    // MAP FUNCTION    
+const mappedArray=array.map(square)
+
+function square(value){
+    return value**2;
+}
+console.log(`Mapped Array is ${mappedArray}`);
+
+            
+    // includes FUNCTION   
+
+        const  includeValue=array.includes(33);
+        console.log(includeValue);
+
+         console.log(allEven);
+         
+         var fruit=['mango','apple','orange','grapes'];
+        //  keys FUNCTION
+          const iterators=fruit.keys();
+          console.log(iterators);
+
+          for(const key of iterators)
+          {
+            console.log(key)
+          }
+
+      
+         
+
+        // entries FUNCTION
+
+          const fruitEntries=fruit.entries();
+        //   for( const entri  of fruitEntries){
+        //     // console.log(entri)
+        //     console.log(`The value is ${entri}`)
+
+        for( const [index,entri] of fruitEntries){
+            console.log(`index is ${index} and value is ${entri}`)
+          }
+
+//   map FUNCTION
+
+  const fruits = ['apple', 'banana', 'cherry'];
+ const fruitDetails = fruits.map(getDetails);
+
+function getDetails(value) {
+  return( { value: value, length: value.length });
+}
+console.log(fruitDetails);
+
+// reduce function
+const fruitDetailsss = fruits.reduce(getDetails);
+function getDetails(value) {
+  return( { value: value, length: value.length });
+}
+console.log(fruitDetailsss);
+
+
+// for each function
+
+const fruitss = ['apple', 'banana', 'cherry'];
+const fruitDetailss = fruitss.forEach(getDetailss);
+
+function getDetailss(value) {
+ return( { value: value, length: value.length });
+}
+console.log(fruitDetailss);
+
+// reduce
+
+const num = [1, 2, 3, 4, 5, 6];
+
+function sum_reducer(accumulator, currentValue) {
+  return accumulator + currentValue;
+}
+
+let sum = num.reduce(sum_reducer);
+console.log(sum); 
+// 21
+
+// using arrow function
+// let summation = num.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue
+// );
+
+
+        
+
+    </script>
+</body>
+</html>

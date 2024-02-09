@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var add = (num1, num2)=>{
+            total = num1 + num2;
+            console.log(total);
+           
+        }
+
+        add(2,3);
+
+        check = add;  // Reference to  function
+
+        check(2,6);
+
+
+        function add2(num1,num2){
+     // add2 = (num1, num2)=>{
+            total = num1 + num2;
+            console.log(total);
+        }
+
+        add2(1,2);
+
+
+
+// single input argument arrow function---(arg1)
+func = arg1 =>{console.log(arg1)};
+func(10);
+// or
+func = (arg1) =>{console.log(arg1)};
+func(10);
+
+//  no input argument  --()
+func = () =>{console.log("hello")};
+func();
+
+// single line function body
+
+func = (arg1, arg2) =>arg1+arg2;
+console.log(func(3,6));
+
+// ????? single expression broken over multiple line
+// const numArrays=[12,4,45,34]
+// func = (numArray) =>(
+//     numArray.filter(num=>num>10)
+//     .map(num=>num**2)
+// )
+// console.log()
+
+
+const numArray = [12, 4, 45, 34];
+
+const result = numArray
+  .filter(num => num > 10)
+  .map(num => num ** 2);
+
+console.log(result);
+
+// ??????Object literal return value
+
+func = (arg1, arg2)=>({key1: arg1, key2: arg2})
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
